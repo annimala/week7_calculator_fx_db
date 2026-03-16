@@ -20,5 +20,6 @@
     <Button text="Calculate Save" onAction="#onCalculateClick"/>
 
     <Label fx:id="resultLabel"/>
+    <Label fx:id="resultLabel2"/>
 
 </VBox>

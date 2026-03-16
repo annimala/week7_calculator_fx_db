@@ -8,6 +8,7 @@ public class CalculatorController {
     @FXML private TextField number1Field;
     @FXML private TextField number2Field;
     @FXML private Label resultLabel;
+    @FXML private Label resultLabel2;
 
     @FXML
     private void onCalculateClick() {
@@ -20,8 +21,8 @@ public class CalculatorController {
             double subtraction = num1 - num2;
             double division = num1 / num2;
 
-            resultLabel.setText("Sum: " + sum + ", Product: " + product + ", Subtraction: " + subtraction + ", Division: " + division);
-
+            resultLabel.setText("Sum: " + sum + ", Product: " + product);
+            resultLabel2.setText("Subtraction: " + subtraction + ", Division: " + division);
             // Save to DB
             ResultService.saveResult(num1, num2, sum, product, subtraction, division);
 
