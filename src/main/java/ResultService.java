@@ -48,7 +48,7 @@ public class ResultService {
             stmt.executeUpdate(createTable);
 
             // Insert the result
-            String insert = "INSERT INTO calc_results (number1, number2, sum_result, product_result, subtraction_result, division_reslut) VALUES (?, ?, ?, ?, ?, ?)";
+            String insert = "INSERT INTO calc_results (number1, number2, sum_result, product_result, subtraction_result, division_result) VALUES (?, ?, ?, ?, ?, ?)";
             try (PreparedStatement ps = conn.prepareStatement(insert)) {
                 ps.setDouble(1, n1);
                 ps.setDouble(2, n2);
