@@ -23,7 +23,10 @@ public class ResultService {
 
     private static String getDatabaseUrl() {
         return "jdbc:mariadb://" + getDatabaseHost() + ":3306/" + DB_NAME +
-                "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+                "?useSSL=false" +
+                "&allowPublicKeyRetrieval=true" +
+                "&serverTimezone=UTC" +
+                "&restrictedAuth=mysql_native_password";
     }
 
     public static void saveResult(double n1, double n2, double sum, double product, double subtraction, double division) {
