@@ -17,11 +17,13 @@ public class CalculatorController {
 
             double sum = num1 + num2;
             double product = num1 * num2;
+            double subtraction = num1 - num2;
+            double division = num1 / num2;
 
-            resultLabel.setText("Sum: " + sum + ", Product: " + product);
+            resultLabel.setText("Sum: " + sum + ", Product: " + product + ", Subtraction: " + subtraction + ", Division: " + division);
 
             // Save to DB
-            ResultService.saveResult(num1, num2, sum, product);
+            ResultService.saveResult(num1, num2, sum, product, subtraction, division);
 
         } catch (NumberFormatException e) {
             resultLabel.setText("Please enter valid numbers!");
